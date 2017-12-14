@@ -13,6 +13,7 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/css/{$cat_style}" />
+<link rel="stylesheet" type="text/css" href="themes/68ecshopcom_360buy/css/article.css" />
 <script>var jdpts = new Object(); jdpts._st = new Date().getTime();</script>
 <script type="text/javascript" src="themes/68ecshopcom_360buy/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript" src="themes/68ecshopcom_360buy/js/jquery-lazyload.js"></script>
@@ -446,6 +447,20 @@
   </div>
   <!-- #BeginLibraryItem "/library/right_sidebar.lbi" --><!-- #EndLibraryItem -->
   <!-- #BeginLibraryItem "/library/arrive_notice.lbi" --><!-- #EndLibraryItem -->
+
+{*分类文章*}
+<div class="article-box clearfix">
+    <div class="main-con">
+        <div class="title"> <span class="tName">相关文章</span> </div>
+                <ul class="allList">
+                    <!--{foreach from=$artciles_cat item=article}-->
+                    <li style="float: left;
+    width: 33%;"><a class="kind" href="{$article.url}" target="_blank" title="{$article.short_title}">{$article.short_title}</a><span></li>
+                    <!-- {/foreach} -->
+                </ul>
+    </div>
+</div>
+
   <div class="site-footer">
         <div class="footer-related">
             <!-- #BeginLibraryItem "/library/help.lbi" --><!-- #EndLibraryItem -->
