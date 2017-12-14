@@ -1,4 +1,4 @@
-<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
+﻿<!-- $Id: category_info.htm 16752 2009-10-20 09:59:38Z wangleisvn $ -->
 
 {include file="pageheader.htm"} 
 <!-- start add new category form -->
@@ -20,7 +20,15 @@
         </td>
       </tr>
    {* 代码增加_end  By  www.68ecshop.com *}
-      
+      <tr>
+            <td class="label">相关文章分类:</td>
+            <td>
+                <select name="article_catid">
+                    {$cat_articles.cat}
+                </select>
+                <span class="notice-span" {if $help_open}style="display:block" {else} style="display:none" {/if} id="noticePathname">设置后商品分类页面显示相关文章</span>
+            </td>
+        </tr>
       <tr>
         <td class="label">{$lang.parent_id}:</td>
         <td><select name="parent_id">

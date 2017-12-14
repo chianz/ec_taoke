@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /**
  * ECSHOP 商品分类管理程序
@@ -339,6 +339,9 @@ if ($_REQUEST['act'] == 'edit')
         $attr_cat_id = 0;
     }
 
+	/*文章分类获取*/
+    $cat_articles = array('region' => $val['region'], 'sort_order' => $val['sort_order'], 'number'=>0, 'cat'=>article_cat_list(0,0,true,1));
+    $smarty->assign('cat_articles', $cat_articles);  //文章分类
     /* 模板赋值 */
     $smarty->assign('is_virtual' , $cat_info['is_virtual']); //分类类型
     $smarty->assign('attr_list',        $attr_list); // 取得商品属性
@@ -422,6 +425,7 @@ if ($_REQUEST['act'] == 'update')
 	 /*  代码增加_srat By www.ecshop68.com */
 	$cat['brand_qq']  = !empty($_POST['brand_wwwecshop68com']) ? $_POST['brand_wwwecshop68com'] : '';
 	$cat['attr_wwwecshop68com']  = !empty($_POST['attr_qq']) ? $_POST['attr_qq'] : '';
+	$cat['article_catid']  = !empty($_POST['article_catid']) ? intval($_POST['article_catid']) : 0;
 	 /*  代码增加_end By www.ecshop68.com */
 	/* 代码增加_start Byjdy */
 	

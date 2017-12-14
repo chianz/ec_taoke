@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /**
  * ECSHOP 商品分类
@@ -626,6 +626,16 @@ $display  = (isset($_REQUEST['display']) && in_array(trim(strtolower($_REQUEST['
 		$smarty->assign('data_dir',    DATA_DIR);
 		$smarty->assign('brand_list',      $brand_list);
 		$smarty->assign('promotion_info', get_promotion_info('',0));
+
+		/*
+		 * 获取分类关联最新文章
+		 * by @author maibao
+		 * 1：后台管理商品分类添加关联文章选项
+		 * 		category 添加分类信息
+		 * 		数据库添加article_catid字段
+		 * 2: 调取相关分类下的文章显示
+		 * */
+        	$smarty->assign('artciles_cat',    get_cat_articles($index_file['article_catid'], $page, $size));
 
 
 		/* 调查 */

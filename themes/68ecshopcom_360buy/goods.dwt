@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -408,7 +408,7 @@
                   	<div id="choose-btns" class="buyNub-buy"> 
                         <!--{if $goods_n>0}-->
                         <!-- 跳转到淘宝短连接 -->
-                        <a href="{$goods.taoke_link}" name="bi_addToCart" class="u-buy1">立即购买</a>
+                        <a href="{$goods.taoke_link}" name="bi_addToCart" class="u-buy1" rel="nofollow">立即购买</a>
                         <!--去除加入购物车
                         <a href="javascript:addToCart({$goods.goods_id})" name="bi_addToCart" class="u-buy2">加入购物车</a>-->
                         <!-- {else}--> 
