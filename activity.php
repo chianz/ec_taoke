@@ -35,7 +35,6 @@ $cache_id = sprintf('%X', crc32(date('ym') . '-' . $_CFG['lang']));
 if (!$smarty->is_cached('activity.dwt', $cache_id))
 {
 	assign_template();
-	
 	$position = assign_ur_here(0, $_LANG['shopping_activity']);
 	$smarty->assign('page_title',       $position['title']);    // 页面标题
 	$smarty->assign('ur_here',          $position['ur_here']);  // 当前位置
